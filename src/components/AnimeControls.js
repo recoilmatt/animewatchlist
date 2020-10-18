@@ -48,7 +48,7 @@ export const AnimeControls = ({ type, anime }) => {
         <>
           <button
             className="ctrl-btn"
-            /* disabled={watchlistDisabled} */
+            disabled={watchlistDisabled}
             onClick={test}
           >
             <i className="fas fa-plus"></i>
