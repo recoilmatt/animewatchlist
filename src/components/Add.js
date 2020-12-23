@@ -16,7 +16,9 @@ function Add() {
     fetch(`${base_url}/search/anime?q=${e.target.value}&page=1`)
       .then((res) => res.json())
       .then((data) => {
-        if (!data.errors) {
+        if (data.status === 404) {
+          setResults([]);
+        } else if (!data.errors) {
           console.log(data);
           setResults(data.results);
         } else {
